@@ -4,10 +4,7 @@
   "description": "A system.",
   "main": "lib/repetitivo.scss",
   "scripts": {
-    "build": "node-sass lib/repetitivo.scss build/repetitivo.css",
     "generate:docs": "sassdoc lib/repetitivo",
-    "generate:docs:watch": "nodemon -w lib -e scss -x 'npm run generate:docs'",
-    "start": "npm run build -- --watch",
     "test": "test/build_individually.sh"
   },
   "repository": {
@@ -22,10 +19,7 @@
   },
   "homepage": "https://github.com/Oktavilla/repetitivo#readme",
   "devDependencies": {
-    "json": "^11.0.0",
-    "node-sass": "^6.0.1",
-    "nodemon": "^2.0.13",
-    "sass": "^1.42.1",
-    "sassdoc": "^2.1.20"
+    "sass": "^1.54.4",
+    "sassdoc": "^2.7.4"
   }
 }

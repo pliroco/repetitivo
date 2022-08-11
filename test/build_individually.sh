@@ -23,21 +23,6 @@ success () {
   echo -e "${COLOR_GREEN}✔ ${file}${COLOR_RESET}"
 }
 
-echo "Test using node-sass"
-
-for file in $(find "${DIR}" -name "*.scss" -not -name "_index.scss"); do
-  result=$(node-sass ${file} 2>&1 > /dev/null)
-
-  if [ "$result" ]; then
-    error "${file}" "${result}"
-  else
-    success "${file}"
-  fi
-done
-
-echo
-echo "Test using sass (Dart)"
-
 for file in $(find "${DIR}" -name "*.scss" -not -name "_index.scss"); do
   result=$(sass ${file} 2>&1 > /dev/null)
 
