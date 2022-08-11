@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import "../config/breakpoints";
 
 @import "../functions/strip-units";
@@ -32,11 +34,11 @@
     }
 
     @if $min {
-      $min: (strip-units($min) / 16) * 1em;
+      $min: math.div(strip-units($min), 16) * 1em;
     }
 
     @if $max {
-      $max: (strip-units($max) / 16) * 1em;
+      $max: math.div(strip-units($max), 16) * 1em;
     }
 
     $breakpointString: false;
